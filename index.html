@@ -3,6 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>jQuery Template</title>
+    <style>
+    #preview {
+        width: 200px;
+        height: 200px;
+        background-color: lightGray;
+      }
+    </style>
   </head>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script>
@@ -11,6 +18,18 @@
       });
   </script>
   <body>
-  
+    
+    Name: <input id="name"><br>
+    What is the achievement: <input id="achi"><br>
+    Comment (optional): <input id="comment"><br>
+    Customize:<br>Background: 
+    <input type = "checkbox" name = "background-color" value = "background-color"> Background color
+    <input type = "checkbox" name = "custom" value = "custom"> Custom<br>
+    <br>
+    <div id="preview">
+      <content>
+        
+      </content>
+    </div>
   </body>
 </html>
