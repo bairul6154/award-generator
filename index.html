@@ -7,14 +7,28 @@
     #preview {
         width: 200px;
         height: 200px;
-        background-color: lightGray;
+        border: 5px solid gold;
       }
+    h1, h2, #spanName{
+      font-size: 20px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 10px;
+    }
     </style>
   </head>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script>
+      $('#name').val('name');
       $(function(){
+        $('button').click(function() {
+          var name = $('#name').val();
+          var achi = $('#achi').val();
           
+          $('#spanAchi').html(achi);
+          $('#spanName').html(name);
+        });
       });
   </script>
   <body>
@@ -25,11 +39,11 @@
     Customize:<br>Background: 
     <input type = "checkbox" name = "background-color" value = "background-color"> Background color
     <input type = "checkbox" name = "custom" value = "custom"> Custom<br>
-    <br>
+    <button>Update</button>
+    <br><br>
     <div id="preview">
-      <content>
-        
-      </content>
+      <h1>Certificate of <span id="spanAchi"></span></h1>
+      <h2>This certificate is presented to<br><span id="spanName"></span></h2>
     </div>
   </body>
 </html>
