@@ -20,14 +20,18 @@
   </head>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script>
-      $('#name').val('name');
+      //$('#name').val('name');
       $(function(){
         $('button').click(function() {
           var name = $('#name').val();
           var achi = $('#achi').val();
-          
+          var comment = $('#comment').val();
+          var colors = $('#colors').val();
+          console.log(colors);
           $('#spanAchi').html(achi);
           $('#spanName').html(name);
+          $('#h2Comment').html(comment);
+          
         });
       });
   </script>
@@ -37,13 +41,14 @@
     What is the achievement: <input id="achi"><br>
     Comment (optional): <input id="comment"><br>
     Customize:<br>Background: 
-    <input type = "checkbox" name = "background-color" value = "background-color"> Background color
-    <input type = "checkbox" name = "custom" value = "custom"> Custom<br>
+    <input type="color" name="favcolor" value="#ff0000" id="colors"> Background color
+    <input type="checkbox" name="custom" value="custom"> Custom<br>
     <button>Update</button>
     <br><br>
     <div id="preview">
       <h1>Certificate of <span id="spanAchi"></span></h1>
       <h2>This certificate is presented to<br><span id="spanName"></span></h2>
+      <h2 id="h2Comment"></h2>
     </div>
   </body>
 </html>
